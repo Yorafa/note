@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     name: Build Preview
     steps:
       - uses: actions/checkout@v6
@@ -35,10 +35,9 @@ jobs:
         run: npm run check
 
       - name: Build Quartz
-        run: npx quartz build -d docs -v
+        run: npx quartz build
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: preview-build
           path: public

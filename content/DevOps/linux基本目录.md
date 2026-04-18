@@ -1,4 +1,5 @@
 `/` 下的各个文件夹:
+
 - `bin`: 常用二进制应用 (例如`ls, cd, cp...`等指令)
 - `boot`: 系统引导加载程序
 - `dev`: 设备文件
@@ -14,6 +15,6 @@
 - `sbin`: system binary, 系统管理和维护的二进制应用
 - `srv`: service, 存储特定服务如 Web, FTP, git等数据
 - `sys`: 提供内核对象和硬件设备的管理接口
-- `tmp`:  临时文件，重启会清空
+- `tmp`: 临时文件，重启会清空
 - `usr`: UNIX System Resources and UNIX Source Repository, 存放只读的用户数据和应用程序
 - `var`: 存放运行时产生的可变数据，如logs， caches

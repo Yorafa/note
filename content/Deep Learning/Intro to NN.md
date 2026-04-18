@@ -36,6 +36,6 @@ logistic function: $y = \frac{1}{1 + e^{-z}}$
 
 Hyperbolic tangent function: $y = \frac{e^z - e^{-z}}{e^z + e^{-z}}$
 
-*Rectified Linear Unit (ReLU)*: $y = \max(0,z)$  (the common used one)
+_Rectified Linear Unit (ReLU)_: $y = \max(0,z)$ (the common used one)
 
 Soft ReLU: $y = \log(1 + e^z)$

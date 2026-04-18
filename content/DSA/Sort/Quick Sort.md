@@ -15,7 +15,7 @@ def quick_sort(arr):
     smaller = quick_sort(smaller)
     larger = quick_sort(larger)
     return smaller + larger
-    
+
 def partition(arr, pivot):
     smaller = [x for x in arr if x <= pivot]
     larger = [x for x in arr if x > pivot]
@@ -26,7 +26,7 @@ def partition(arr, pivot):
 
 We have $T(n) = T(n-1) + T(0) + \Theta(n) = T(n-1) + \Theta(n)$. By the master theorem, we have $T(n) = \Theta(n^2)$.
 
-| Algorithm | Best Case | Average Case | Worst Case |
-| :---: | :---: | :---: | :---: |
-| Deterministic Quick Sort | $O(n\log n)$ | $O(n\log n)$ | $O(n^2)$ |
-| Random Quick Sort | $O(n\log n)$ | $O(n\log n)$ | $O(n^2)$ |
+|        Algorithm         |  Best Case   | Average Case | Worst Case |
+| :----------------------: | :----------: | :----------: | :--------: |
+| Deterministic Quick Sort | $O(n\log n)$ | $O(n\log n)$ |  $O(n^2)$  |
+|    Random Quick Sort     | $O(n\log n)$ | $O(n\log n)$ |  $O(n^2)$  |

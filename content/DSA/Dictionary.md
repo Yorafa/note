@@ -10,4 +10,4 @@ Dictionary is famous ADT in python (.net). In other programming language we call
 
 ## Implement
 
-Usually implemented by Red-Black-Tree and hashing for the best time complexity. The easy way could be a simple BST with given priority, that is, insert, search and delete with best  $O(\log n)$ time complexity and $O(n)$ with the worst case (RBT make all $O(\log n)$). To enhance it, we also can use AVL Tree which easier than RBT, but also make all $O(\log n)$
+Usually implemented by Red-Black-Tree and hashing for the best time complexity. The easy way could be a simple BST with given priority, that is, insert, search and delete with best $O(\log n)$ time complexity and $O(n)$ with the worst case (RBT make all $O(\log n)$). To enhance it, we also can use AVL Tree which easier than RBT, but also make all $O(\log n)$

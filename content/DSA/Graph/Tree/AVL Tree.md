@@ -2,9 +2,9 @@
 
 A tree is an **AVL Tree** if it is [binary search tree](Binary%20Search%20Tree.md) and AVL balanced.
 
--   We first define the balance factor \= \#height of right subtree -  \#height of left subtree
--   **AVL balanced** means that each node of this tree satisfied balance factor in range $[-1, 1]$
--   we also call balance factor in range $[-1, 1]$ as **AVL invariant**
+- We first define the balance factor \= \#height of right subtree - \#height of left subtree
+- **AVL balanced** means that each node of this tree satisfied balance factor in range $[-1, 1]$
+- we also call balance factor in range $[-1, 1]$ as **AVL invariant**
 
 AVL have the same methods as the BST do, but need more about keep balanced
 
@@ -16,17 +16,17 @@ To have AVL Tree, we should modify the implement of BST.
 
 **Delete**: The same delete with modify the height of node to track if balance factor. After delete, check the AVL invariant if satisfied. If not, then we need to do rebalance/rotation.
 
-**Rebalance:** base on balance factor negative or not, we will swap left/right children with parent; more specifically, we have 4 cases  after insert/delete:
+**Rebalance:** base on balance factor negative or not, we will swap left/right children with parent; more specifically, we have 4 cases after insert/delete:
 
-1.    insert/delete right, then left tree's right's height > left tree's left's: rotate left about left tree and then rotate right about root
-2.    left tree's right's height \<\= left tree's left's: rotate right about root
-3.    insert/delete left,  then right tree's left's height > right tree's right's: rotate right about right tree and then rotate left about root
-4.    right tree's left's height \<\= tree's right's: rotate left about root
+1.  insert/delete right, then left tree's right's height > left tree's left's: rotate left about left tree and then rotate right about root
+2.  left tree's right's height \<\= left tree's left's: rotate right about root
+3.  insert/delete left, then right tree's left's height > right tree's right's: rotate right about right tree and then rotate left about root
+4.  right tree's left's height \<\= tree's right's: rotate left about root
 
 **Rotation:**
 
-1.   rotate left: swap root with right tree where root new right \= right tree's left and right tree's left \= root;
-2.   rotate right: swap root with left tree where root new left \= right tree's right and left tree's right \= root;
+1.  rotate left: swap root with right tree where root new right \= right tree's left and right tree's left \= root;
+2.  rotate right: swap root with left tree where root new left \= right tree's right and left tree's right \= root;
 
 Code in python given in lec:
 
@@ -66,7 +66,7 @@ def AVL-REBALANCE-RIGHT(root):  # Precondition: root is not NIL
             root.left = AVL-ROTATE-LEFT(root.left)
             root = AVL-ROTATE-RIGHT(root)
             return root
-        
+
 def AVL-ROTATE-LEFT(parent): # Precond: parent != NIL, parent.right != NIL
     # Rearrange references.
     child = parent.right
@@ -146,9 +146,7 @@ def AVL-SEARCH(root, k):
 ## Worst-Case Time Complexity
 
 | Operation | Time Complexity |
-|:---------:|:---------------:|
-|   Search  |      O(log n)   |
-|   Insert  |      O(log n)   |
-|   Delete  |      O(log n)   |
-
-
+| :-------: | :-------------: |
+|  Search   |    O(log n)     |
+|  Insert   |    O(log n)     |
+|  Delete   |    O(log n)     |

@@ -58,6 +58,6 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
         ext: ".html",
       })
     },
-    async *partialEmit() { },
+    async *partialEmit() {},
   }
 }

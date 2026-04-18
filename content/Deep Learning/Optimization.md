@@ -5,7 +5,7 @@ How do we train models using gradient? And how do we solve the issues of gradien
 Locally, a function can be approximated by its second-order Taylor approximation around a point $\theta_0$: $\mathcal{J}(\theta) \approx \mathcal{J}(\theta_0) + \nabla_{\theta} \mathcal{J}(\theta_0)^T(\theta - \theta_0)  + \frac{1}{2}(\theta - \theta_0)^T H(\theta_0)(\theta - \theta_0)$.
 
 - $H$ also represent the curvature of the function. for some vector $v$, $v^T H v > 0$ leads the cost function curves upwards (i.e. positive curvature, positive definite). When $v^T H v < 0$, the cost function curves downwards (i.e. negative curvature).
-  - $v^T H v \ge 0$  then the cost function is smooth and convex which means has no spurious local minima.
+  - $v^T H v \ge 0$ then the cost function is smooth and convex which means has no spurious local minima.
 - We can also have the spectral decomposition of the Hessian matrix: $H(\theta_0) = Q \Lambda Q^T$, where $Q$ is an orthogonal matrix and $\Lambda$ is a diagonal matrix. (i.e. the eigenvector matrix and eigenvalue matrix)
 
 The problems are that the permutation symmetries (H property) will lead non-convex when we train nn with hide units.
@@ -52,7 +52,7 @@ more about [Adam](https://arxiv.org/pdf/1412.6980.pdf) by Diedre Kingma and Jimm
 
 ### Critical Points
 
-The **critical point** is $\mathcal{J}(\theta) \approx \mathcal{J}(\theta_0) + \frac{1}{2}(\theta - \theta_0)^T H(\theta_0)(\theta - \theta_0)$. 
+The **critical point** is $\mathcal{J}(\theta) \approx \mathcal{J}(\theta_0) + \frac{1}{2}(\theta - \theta_0)^T H(\theta_0)(\theta - \theta_0)$.
 
 - for any critical point $\theta^*$, $H(\theta^*)$ exists and is positive definite $\implies \theta^*$ is a local minimum.
 

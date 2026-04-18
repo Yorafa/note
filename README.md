@@ -6,7 +6,7 @@ This note is built by [Quartz](https://quartz.jzhao.xyz/).
 
 ## Issues
 
-Because most of the content is written based on my own experience, there will always be many deep-rooted wrong ideas. For these contents, you are welcome to submit an for discussion, or if you are a UofT student who has a deep understanding to the course and you are welcome to submit your own notes. 
+Because most of the content is written based on my own experience, there will always be many deep-rooted wrong ideas. For these contents, you are welcome to submit an for discussion, or if you are a UofT student who has a deep understanding to the course and you are welcome to submit your own notes.
 
 ## Declaration
 

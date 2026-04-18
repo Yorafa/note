@@ -25,12 +25,12 @@ import { minimatch } from "minimatch"
 type ContentMap = Map<
   FilePath,
   | {
-    type: "markdown"
-    content: ProcessedContent
-  }
+      type: "markdown"
+      content: ProcessedContent
+    }
   | {
-    type: "other"
-  }
+      type: "other"
+    }
 >
 
 type BuildData = {

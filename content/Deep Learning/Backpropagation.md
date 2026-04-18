@@ -28,7 +28,7 @@ The computational cost:
 
 Automatic differentiation (autodiff): a general technique for computing a value and constructing a procedure for computing its derivative.
 
-Backpropagation: a specific algorithm for computing derivatives of *neural networks*.
+Backpropagation: a specific algorithm for computing derivatives of _neural networks_.
 
 Autograd: a Python library for automatic differentiation.
 
@@ -36,7 +36,7 @@ Autograd: a Python library for automatic differentiation.
 
 Since backprop is a autodiff algorithm, we want to know more about autodiff to understand backprop better.
 
-An autodiff system will convert the program into a sequence of *primitive operations* (ops) which have specified routines for computing derivatives. For example, we have two functions $y = ax + b$ and $z = y^2$. We can convert them as $t_1 = ax, y = t_1 + b, z = y^2$. That is, we can do the derivative of each operation easily. i.e. autograd tracing this route through forward pass.
+An autodiff system will convert the program into a sequence of _primitive operations_ (ops) which have specified routines for computing derivatives. For example, we have two functions $y = ax + b$ and $z = y^2$. We can convert them as $t_1 = ax, y = t_1 + b, z = y^2$. That is, we can do the derivative of each operation easily. i.e. autograd tracing this route through forward pass.
 
 For each primitive operation, we must specify VJPs for each its arguments (i.e. `defvjp`) such function always with format which takes inthe output gradient, the answer (i.e. the output of the function), and the inputs to the function, and returns the input gradients. example:
 

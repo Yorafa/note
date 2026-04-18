@@ -1,4 +1,4 @@
-Heap is a binary tree with the max/min among its children value in its root,  and also, for all of its child tree, their root also is the max/min among their child tree.
+Heap is a binary tree with the max/min among its children value in its root, and also, for all of its child tree, their root also is the max/min among their child tree.
 
 `Heapify(heap, i):` For node $i$, keep $i$ is maintain order compare to its children
 
@@ -12,9 +12,9 @@ Heap is a binary tree with the max/min among its children value in its root,  an
 
 We use array to implement heap, named it $arr$, but think it as binary tree, where for the $i$ node, the parent of this node is $arr[\lfloor (i - 1)/2\rfloor]$, the left node is $arr[2(i + 1) - 1]$ and the right node $arr[2(i+1)]$. In 1-index, it will be change into: the parent of this node is $arr[\lfloor i/2\rfloor]$, the left node is $arr[2i]$ and the right node $arr[2i + 1]$
 
--   e.g. $[0, 1,2,3,4,5,6]$
--   the parent of 1 and 2 is the node 0 (i.e. (2-1)/2 = 0, (1-1)/2 = 0); same for 3,4 (i.e. (3-1)/2 = 1 = (4-1)/2 = 1)
--   the left node of 1 is $arr[3]$ and right node is $arr[4]$
+- e.g. $[0, 1,2,3,4,5,6]$
+- the parent of 1 and 2 is the node 0 (i.e. (2-1)/2 = 0, (1-1)/2 = 0); same for 3,4 (i.e. (3-1)/2 = 1 = (4-1)/2 = 1)
+- the left node of 1 is $arr[3]$ and right node is $arr[4]$
 
 ```mermaid
 flowchart TD
@@ -24,7 +24,7 @@ id1 --> id3((2)) --> id6((5))
 id3 --> id7((6))
 ```
 
-To **heapify** a specific node $i$:  we compare i and its two children node, find the larger/lower base on the (min heap/max heap)  switch and keep tracking the lower level 
+To **heapify** a specific node $i$: we compare i and its two children node, find the larger/lower base on the (min heap/max heap) switch and keep tracking the lower level
 
 To **insert** a value: we first insert at the end and compare with its parent and recursive to do it 'till can't.
 
@@ -37,8 +37,6 @@ Priority Queue is a maxheap.
 For a given array, we need to use heapify every parent node to make it heap.
 
 We can use a heapified array to do **heap sort**, where we use the property max/min and switch it with the last element and then heapify to keep heap work.
-
-
 
 example code for ez version maxheap:
 
@@ -100,14 +98,14 @@ vector<int> heapsort(vector<int>& unknown){
 
 ## Worst-Case Time Complexity
 
-| Operation | Time Complexity |
-|:---------:|:---------------:|
-| Heapify   |      O(log n)   |
-| Insert    |      O(log n)   |
-| Extract   |      O(log n)   |
-| HeapSort  |      O(n log n) |
-| ExtractMax/ExtractMin | O(log n)|
-| Maximum/Minimum | O(1)|
-| decrease/increase key | O(log n)|
-| delete | O(log n)|
-| Union | O(n)|
+|       Operation       | Time Complexity |
+| :-------------------: | :-------------: |
+|        Heapify        |    O(log n)     |
+|        Insert         |    O(log n)     |
+|        Extract        |    O(log n)     |
+|       HeapSort        |   O(n log n)    |
+| ExtractMax/ExtractMin |    O(log n)     |
+|    Maximum/Minimum    |      O(1)       |
+| decrease/increase key |    O(log n)     |
+|        delete         |    O(log n)     |
+|         Union         |      O(n)       |

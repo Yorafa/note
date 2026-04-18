@@ -3,6 +3,7 @@ A directed graph $G = (V,E)$ is **strongly connected** $\iff$ for every pair of 
 Using Edge and Transpose Edge, we can find the strongly connected components of a directed graph $G = (V,E)$.
 
 Steps:
+
 1. Call DFS(G) to compute finishing times $v.f$ for each vertex $v$.
 2. compute $G^T$.
 3. call DFS(G^T), but in the main loop of DFS, consider the vertices in order of decreasing $v.f$ (as computed in line 1).

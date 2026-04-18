@@ -4,8 +4,8 @@ Almost every courses teach induction
 
 **Basic Induction**: To prove $\forall n\in \N, (P(n))$ use some base case and induction to prove for all.
 
--   $(P(0) \land \forall k \in \N. (P(k)\implies P(k+1))) \implies \forall n\in \N, (P(n))$
--   we have some flexibility on basic case where if we have goal to prove $\forall n\ge1$ then we will prove $P(1)$
+- $(P(0) \land \forall k \in \N. (P(k)\implies P(k+1))) \implies \forall n\in \N, (P(n))$
+- we have some flexibility on basic case where if we have goal to prove $\forall n\ge1$ then we will prove $P(1)$
 
 Basic Induction prove template:
 
@@ -17,8 +17,8 @@ Inductive step: Let k be arbitrary natural number, and assume P(k). we will show
 
 **Complete Induction**: To prove $\forall n\in \N, (P(n))$ use some base case and more induction steps to prove for all.
 
--   $(P(0) \land \forall k \in \N. (P(0)\land P(1) \land \ldots\land P(k)\implies P(k+1))) \implies \forall n\in \N, (P(n))$
--   similarly, we have flexibility on basic case.
+- $(P(0) \land \forall k \in \N. (P(0)\land P(1) \land \ldots\land P(k)\implies P(k+1))) \implies \forall n\in \N, (P(n))$
+- similarly, we have flexibility on basic case.
 
 Complete Induction prove template:
 
@@ -36,15 +36,15 @@ Define a **construction sequence** $S$ of length $n$ as $(x_0,\ldots,x_n)$ where
 
 The **length** of a construction sequence is represented by some measure of complexity of the object.
 
-## WOP 
+## WOP
 
 WOP(Well Ordering Principle): $\forall S\subseteq \N(S\ne \emptyset), S$ has a **minimal element**.
 
--   let $a\in S, \forall b\in S, a\le b \implies a$ is a minimal element 
+- let $a\in S, \forall b\in S, a\le b \implies a$ is a minimal element
 
 We can use WOP to prove induction statements of the form $\forall n\in \N, (P(n))$:
 
-1.   Check $P(b)$ is true, $b$ stand the basic case
-2.   By contradiction, assume $\exists n\in \N.(\lnot P(n))$. So the set $S = \{n\in\N: \lnot P(n)\}$ is non-empty
-3.   By the WOP, $S$ has a minimal element, denote as $m$; commonly, $m$ is the smallest natural number for which $P$ doesn't hold.
-4.   Derive the contradiction by showing $P(m)$ or by finding a $m' < m$, for which $\lnot P(m')$
+1.  Check $P(b)$ is true, $b$ stand the basic case
+2.  By contradiction, assume $\exists n\in \N.(\lnot P(n))$. So the set $S = \{n\in\N: \lnot P(n)\}$ is non-empty
+3.  By the WOP, $S$ has a minimal element, denote as $m$; commonly, $m$ is the smallest natural number for which $P$ doesn't hold.
+4.  Derive the contradiction by showing $P(m)$ or by finding a $m' < m$, for which $\lnot P(m')$

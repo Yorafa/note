@@ -42,7 +42,7 @@ def LCABL:
 			if px == py:
 				# 如果祖先相同说明，前面在\sum_{j = 0}^{n} = a_j2^j [0, j] 之间
 				#可能还有相同祖先
-				continue			
+				continue
 			# 太爷爷是爷爷的爸爸
 			x, y = px, py
 		# for loop实际上找的一直都是[0, j] 之间最后一个不同的数
@@ -51,4 +51,5 @@ def LCABL:
 ```
 
 ### 例题
+
 [Number of Ways to Assign Edge Weights II](https://leetcode.com/problems/number-of-ways-to-assign-edge-weights-ii/)

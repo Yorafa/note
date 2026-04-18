@@ -1,6 +1,6 @@
 # Kubernetes(k8s) Introduction
 
-K8s 指Kubernetes, 8是指中间有8个characters. 
+K8s 指Kubernetes, 8是指中间有8个characters.
 
 ## 为啥用它
 
@@ -14,6 +14,4 @@ pod:
 deployment:
 service:
 
-
 ## 操作指南
-

@@ -9,15 +9,15 @@ We define a **saft edge** for a subset $A$ of some minimum spanning tree if addi
 
 Let $G = (V,E)$ be a connected undirected graph with a real-valued weight function $w$ defined on $E$. Let $A4 be a subset of $E$ that is included in some minimum spanning tree for $G$, let $(S, V-S)$ be any cut of $G$ that respect $A$, and let $(u,v)$ be a light edge crossing $(S, V-S)$. Then $(u,v)$ is a safe edge for $A$.
 
-
-Let $G = (V, E)$ be a connected, undirected graph with a real-valued weight function $w$ defined on $E$. Let $A$ be a subset of $E$ that is included in some minimum spanning tree for $G$, and let $C = (V_C, V - V_C)$  be a connected component (tree) in the
+Let $G = (V, E)$ be a connected, undirected graph with a real-valued weight function $w$ defined on $E$. Let $A$ be a subset of $E$ that is included in some minimum spanning tree for $G$, and let $C = (V_C, V - V_C)$ be a connected component (tree) in the
 forest $G_A = (V, A)$. If $(u,v)$ is a light edge connecting $C$ to some other component in $G_A$, then $(u,v)$ is safe for $A$.
 
 ## Kruskal's Algorithm
 
-Kruskal’s algorithm finds a safe edge to add to the growing forest by finding, of all the edges that connect any two trees in the forest, an edge $(u,v)$ of least weight. One implementation of Kruskal’s algorithm is to use a disjoint-set data structure to keep track if two vertices are in the same tree. 
+Kruskal’s algorithm finds a safe edge to add to the growing forest by finding, of all the edges that connect any two trees in the forest, an edge $(u,v)$ of least weight. One implementation of Kruskal’s algorithm is to use a disjoint-set data structure to keep track if two vertices are in the same tree.
 
 The basic idea:
+
 1. Make a set for each vertex.
 2. sort the edges in nondecreasing order of weight.
 3. Union sorted edges if they are not in the same set.
@@ -30,6 +30,7 @@ The running time of Kruskal’s algorithm is $O(|E| \log |V|)$.
 Prim’s algorithm finds a safe edge to add to the growing forest by finding, of all the edges that connect any vertex in the forest to any vertex not in the forest, an edge $(u,v)$ of least weight. One implementation of Prim’s algorithm is to use a priority queue to keep track of the light edges that connect the forest to the rest of the graph.
 
 The basic idea:
+
 1. set up all keys and parents.
 2. set up a min-prority heap by vertex.
 3. set root key to 0 and then do while loop

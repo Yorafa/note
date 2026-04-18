@@ -3,6 +3,7 @@ For a graph $G = (V,E)$ and a start vertex $s\in V$, the **breadth-first search*
 The total run-time of BFS is $O(|V|+|E|)$ where the initialization takes $O(|V|)$ time and scanning all the edges takes $O(|E|)$ time.
 
 Some problems can be solved by BFS: shortest path, connected components, bipartite, two-colorability, etc.
+
 - shortest path: we do BFS and return the degree of the target node. If we can successfully reach the target node, we will update the degree of the target node. Otherwise, we will see its degree is infinity which is the default value.
 
 For a graph $G = (V,E)$ and a start vertex $s\in V$, we define **predecessor subgraph** of $G$ from $s$ where $G_s = (V_s,E_s)$ such that $V_s = \{v\in V|v.\pi \ne \text{NIL}\} \cup \{s\}$ and $E_s = \{(v.\pi,v)|v\in V_s - \{s\}\}$. Such subgraph is breath-first tree if $V_s$ contains all reachable vertices from $s$ and $\forall v\in V_s$ there is a unique path from $s$ to $v$ in $G_s$ (also is the shortest path from $s$ to $v$).

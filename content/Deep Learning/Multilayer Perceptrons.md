@@ -1,6 +1,6 @@
 # Multi-Layer Perceptrons
 
-We define **layers** by some grouped units. Each unit here in graph is a neuron node. The input layer is the first layer, and the output layer is the last layer. The hidden layers are the layers between input and output layers. 
+We define **layers** by some grouped units. Each unit here in graph is a neuron node. The input layer is the first layer, and the output layer is the last layer. The hidden layers are the layers between input and output layers.
 
 For a layer, if all input units are connected to all ouput units, then we call it a **fully-connected layer**. If such multilayer network consisting of fully-connected layers is called a **multilayer perceptron**.
 

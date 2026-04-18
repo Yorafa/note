@@ -11,7 +11,7 @@ The thing we would convolve by is call a **kernel** or **filter**. We can use ke
 
 ## Convolution Layer
 
-That is, we would like to add a convolution layer to our neural network. 
+That is, we would like to add a convolution layer to our neural network.
 
 Usually, when we have $n \times n$ input image and $k\times k$ kernel, we would have $(n-k+1) \times (n-k+1)$ output image. If we have $l$ padding, we would have $(n-k+2l)+1 \times (n-k+2l)+1$ output image. If we have additional stride $s$, we would have $(n-k+2l)/s+1 \times (n-k+2l)/s+1$ output image. (i.e. $\hat W \times \hat H$)
 
@@ -33,10 +33,10 @@ More comparison, given the same input and output size ($\hat W\hat H i$):
 - $H$ height of input
 - etc...
 
-| Layer Type | Number of Weights | Number of Connections |
-|------------|-------------------|-----------------------|
+| Layer Type      | Number of Weights                       | Number of Connections                   |
+| --------------- | --------------------------------------- | --------------------------------------- |
 | Fully Connected | $W\hat W H \hat H IJ + \hat W \hat H I$ | $W\hat W H \hat H IJ + \hat W \hat H I$ |
-| Convolution | $K^2IJ + I$ | $\hat W\hat H K^2IJ + \hat W\hat H I$ |
+| Convolution     | $K^2IJ + I$                             | $\hat W\hat H K^2IJ + \hat W\hat H I$   |
 
 The add item is the bias term.
 
@@ -52,7 +52,7 @@ We can combine convolution layer and pooling layer to form a convolutional neura
 
 1. The convolution layer with sets of kernels produce a set of feature maps (each obtained by convolving the input with a different kernel).
 2. Beyond the pooling layer, we would always like to have a linear rectification nonlinearity (ReLU) to introduce nonlinearity to the network.
-3. Then we apply on the pooling layer so that higher-layer filters can cover a larger region of inputs than equal-sized filters in lower layers. 
+3. Then we apply on the pooling layer so that higher-layer filters can cover a larger region of inputs than equal-sized filters in lower layers.
 
 Moveover:
 
@@ -62,6 +62,6 @@ Moveover:
 
 ## Object recognition
 
-Object recognition is the task of identifying objects in images. It's closely related to object detection, which is the task of locating objects in images. 
+Object recognition is the task of identifying objects in images. It's closely related to object detection, which is the task of locating objects in images.
 
 Some useful datasets sources MNIST, CIFAR-10, ImageNet, COCO, etc.

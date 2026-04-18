@@ -51,7 +51,7 @@ Lower-dimensional embeddings:
 
 - 2-D embeddings might be misleading since they can't preserve the distance relationships
 
-Most of times, we the fitting of language models is really hard and it might overkill if all we want is to use the embeddings. 
+Most of times, we the fitting of language models is really hard and it might overkill if all we want is to use the embeddings.
 
 ## Glove
 

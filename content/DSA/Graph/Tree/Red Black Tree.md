@@ -4,4 +4,4 @@
 
 ## Insert
 
-insert node is red 
+insert node is red

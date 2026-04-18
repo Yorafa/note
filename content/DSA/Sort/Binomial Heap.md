@@ -1,6 +1,6 @@
 # Binomial Heap
 
-Binomial Heap is a **mergeable heap** is a heap data structure implements by a collection of binomial trees follwing the binomial heap properties: 
+Binomial Heap is a **mergeable heap** is a heap data structure implements by a collection of binomial trees follwing the binomial heap properties:
 
 1. Each binomial tree of binomial heap obeys the min-heap property which is min-heap-oredered.
 2. For any nonnegative integer $k$, there is at most one binomial tree in heap whose root has degree $k$. That is, for a $n$ node binomial heap, there are at most $\lfloor \lg n \rfloor + 1$ binomial trees in the heap.
@@ -33,12 +33,12 @@ Furthermore, a node of binomial heap with 4 attributes: parent, child, sibling, 
 
 ## Worst-Case Time complexity
 
-| Operation | Binary Heap (worst-case) | Binomial Heap (worst-case) | Fibonacci Heap (amortized) |
-|:----------|:------------|:--------------|:---------------|
-| MAKE-HEAP | $\Theta(1)$ | $\Theta(1)$ | $\Theta(1)$ |
-| INSERT | $\Theta(\lg n)$ | $\mathcal{O}(\lg n)$ | $\Theta(1)$ |
-|MINIMUM | $\Theta(1)$ | $\mathcal{O}(\lg n)$ | $\Theta(1)$ |
-|EXTRACT-MIN | $\Theta(\lg n)$ | $\Theta(\lg n)$ | $\mathcal{O}(\lg n)$ |
-|UNION | $\Theta(n)$ | $\mathcal{O}(\lg n)$ | $\Theta(1)$ |
-|DECREASE-KEY | $\Theta(\lg n)$ | $\Theta(\lg n)$ | $\Theta(1)$ |
-|DELETE | $\Theta(\lg n)$ | $\Theta(\lg n)$ | $\mathcal{O}(\lg n)$ |
+| Operation    | Binary Heap (worst-case) | Binomial Heap (worst-case) | Fibonacci Heap (amortized) |
+| :----------- | :----------------------- | :------------------------- | :------------------------- |
+| MAKE-HEAP    | $\Theta(1)$              | $\Theta(1)$                | $\Theta(1)$                |
+| INSERT       | $\Theta(\lg n)$          | $\mathcal{O}(\lg n)$       | $\Theta(1)$                |
+| MINIMUM      | $\Theta(1)$              | $\mathcal{O}(\lg n)$       | $\Theta(1)$                |
+| EXTRACT-MIN  | $\Theta(\lg n)$          | $\Theta(\lg n)$            | $\mathcal{O}(\lg n)$       |
+| UNION        | $\Theta(n)$              | $\mathcal{O}(\lg n)$       | $\Theta(1)$                |
+| DECREASE-KEY | $\Theta(\lg n)$          | $\Theta(\lg n)$            | $\Theta(1)$                |
+| DELETE       | $\Theta(\lg n)$          | $\Theta(\lg n)$            | $\mathcal{O}(\lg n)$       |

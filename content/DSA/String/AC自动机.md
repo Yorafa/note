@@ -11,11 +11,11 @@ class TrieNode:
 		self.fail = None       # 记录上一个最近kmp匹配点
 		self.last = None       # 如果当前匹配成功，还可以通过last回溯所有的成功匹配
 		self.len = 0
-		
+
 class AhoCorasick:
 	def __init__(self):
 		self.root = TrieNode()
-		
+
 	def put(self, s):
 		curr = self.root
 		for i, son in enumerate(curr.son):
@@ -23,7 +23,7 @@ class AhoCorasick:
 				curr.son[i] = TrieNode()
 			curr = curr.son[i]
 		curr.len = len(s)
-		
+
 	def build_fail(self):
 		curr = self.root
 		curr.fail = curr.last = curr
@@ -48,8 +48,9 @@ class AhoCorasick:
 				#self.root
 				son.last = son.fail if son.fail.len else son.fail.last
 				q.append(son)
-				
+
 ```
 
 ## 参考例题
+
 [Construct String with Minimum Cost](https://leetcode.com/problems/construct-string-with-minimum-cost/)
